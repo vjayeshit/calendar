@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div id="page">
+      <aside class="site-sidebar">
+        <div class="logo-wrapper">
+          <a href="/" class="logo">
+            <img src="assets/images/logo.png" alt="logo" />
+          </a>
+        </div>
+        <ul class="menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="fas fa-file-invoice"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="fas fa-exclamation-triangle"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="fas fa-comment-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="active">
+              <i class="fas fa-calendar-alt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="fas fa-clock"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="fas fa-cog"></i>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <div class="site-content">
+        <header class="site-header">
+          <div class="sh-left">
+            <ul>
+              <li>
+                <a href="javascript:void(0)">
+                  <i class="fas fa-cog"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i class="fas fa-comment-alt"></i>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i class="fas fa-calendar-alt"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sh-right">
+            <div class="shr-item languarge">
+              <img src="assets/images/english.png" alt="English" />
+              <span>English</span>
+            </div>
+            <div class="shr-item notification">
+              <a href="javascript:void(0)">
+                <i class="fas fa-bell"></i>
+              </a>
+            </div>
+            <div class="shr-item company-logo">
+              <img src="assets/images/generic-logo.png" alt="compnay logo" />
+            </div>
+            <div class="shr-item profile">
+              <a href="javascript:void(0)">
+                <img src="assets/images/profile.png" alt="name" />
+              </a>
+            </div>
+          </div>
+        </header>
+        <div class="calendar-container">
+          <div class="calendar-header">
+            <div class="ch-left">
+              <ul>
+                <li>
+                  <a href="javascript:void(0)" class="today"> Today </a>
+                </li>
+                <li>
+                  <select>
+                    <option value="day" selected>Day</option>
+                    <option value="week">Week</option>
+                    <option value="month">Month</option>
+                  </select>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="rouned">
+                    <i class="fas fa-angle-left"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="rouned">
+                    <i class="fas fa-angle-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="ch-center">Wednesday, 17 February 2021</div>
+            <div class="ch-right">
+              <div class="button-group">
+                <a href="javascript:void(0)" data-class="size1x" class="active"
+                  >1x</a
+                >
+                <a href="javascript:void(0)" data-class="size2x">2x</a>
+                <a href="javascript:void(0)" data-class="size3x">3x</a>
+              </div>
+              <div class="ch-search-box">
+                <input type="text" placeholder="Search" />
+                <i class="fas fa-search icon"></i>
+              </div>
+              <div>
+                <button class="update-button">Update Shifts</button>
+              </div>
+            </div>
+          </div>
+          <div class="calendar" id="calendar">
+            <div class="calendar-item ci-h-item">
+              <div class="ci-worker">Workder</div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>9am</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>10am</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>11am</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>12pm</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>1pm</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>2pm</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>3pm</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>4pm</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>5pm</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"><span>6pm</span></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                Total <br />
+                Time
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Allie Grater</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg">
+                <div class="ci-card tooltip red-card duration-1-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg">
+                <div
+                  class="ci-card tooltip blue-card duration-1-5-hour tooltip"
+                >
+                  <div class="cic-title">New power outlet installation</div>
+                  <div class="cic-disc">
+                    Electrical<span class="dots"></span>12:00pm - 1:30pm
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>6h</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Rod Knee</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour white-bg">
+                <div class="ci-card tooltip blue-card duration-1-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg">
+                <div class="ci-card tooltip blue-card duration-0-5-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time hour white-bg">
+                <div class="ci-card tooltip blue-card duration-2-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>6h 30m</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Percy Kewshun</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>Off</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Frank N. Stein</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour white-bg">
+                <div class="ci-card tooltip blue-card duration-3-5-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>3h 30m</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Frank N. Stein</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour white-bg">
+                <div class="ci-card tooltip blue-card duration-1-5-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>1h 30m</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Allie Grater</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg">
+                <div class="ci-card tooltip red-card duration-1-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg">
+                <div
+                  class="ci-card tooltip blue-card duration-1-5-hour tooltip"
+                >
+                  <div class="cic-title">New power outlet installation</div>
+                  <div class="cic-disc">
+                    Electrical<span class="dots"></span>12:00pm - 1:30pm
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>6h</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Rod Knee</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour white-bg">
+                <div class="ci-card tooltip blue-card duration-1-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg">
+                <div class="ci-card tooltip blue-card duration-0-5-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time hour white-bg">
+                <div class="ci-card tooltip blue-card duration-2-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>6h 30m</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Percy Kewshun</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>Off</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Frank N. Stein</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour white-bg">
+                <div class="ci-card tooltip blue-card duration-3-5-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>3h 30m</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Frank N. Stein</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour white-bg">
+                <div class="ci-card tooltip blue-card duration-1-5-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>1h 30m</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Allie Grater</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg">
+                <div class="ci-card tooltip red-card duration-1-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg">
+                <div
+                  class="ci-card tooltip blue-card duration-1-5-hour tooltip"
+                >
+                  <div class="cic-title">New power outlet installation</div>
+                  <div class="cic-disc">
+                    Electrical<span class="dots"></span>12:00pm - 1:30pm
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>6h</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Rod Knee</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour white-bg">
+                <div class="ci-card tooltip blue-card duration-1-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg">
+                <div class="ci-card tooltip blue-card duration-0-5-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time hour white-bg">
+                <div class="ci-card tooltip blue-card duration-2-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>6h 30m</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Percy Kewshun</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>Off</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Frank N. Stein</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour white-bg">
+                <div class="ci-card tooltip blue-card duration-3-5-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>3h 30m</span>
+              </div>
+            </div>
+            <div class="calendar-item">
+              <div class="ci-worker">
+                <div class="ci-profile">
+                  <div class="cip-img">
+                    <img src="assets/images/profile.png" alt="Allie Grater" />
+                  </div>
+                  <div class="cip-name">
+                    <h5>Frank N. Stein</h5>
+                    <p>Internal Officer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour white-bg">
+                <div class="ci-card tooltip blue-card duration-1-5-hour">
+                  <div class="cic-title">Sub-Service Name</div>
+                  <div class="cic-disc">
+                    Service Name<span class="dots"></span>Time
+                  </div>
+                  <div class="tooltip-content">
+                    <div class="tc-title">SA19059103</div>
+                    <div class="tc-content">
+                      <p>Address here</p>
+                      <p>Address Detail here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour white-bg"></div>
+              <div class="ci-time hour white-bg"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-time hour"></div>
+              <div class="ci-time half-hour"></div>
+              <div class="ci-worker-log">
+                <span>1h 30m</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>
